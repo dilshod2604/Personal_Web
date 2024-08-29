@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useContext, useState } from "react";
 import "./Navigation.css";
 import { Link } from "react-scroll";
@@ -7,7 +7,9 @@ import { ThemeContext } from "../../providers/ThemeProvider";
 import ThemeSwitcher from "../../Animations/ThemeSwitcher/ThemeSwitcher";
 import { GoLinkExternal } from "react-icons/go";
 
-import { Button } from "antd";
+import { Button, Dropdown, MenuProps } from "antd";
+import { PiDownloadSimpleBold } from "react-icons/pi";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const nav = [
   {
     name: "Home",
@@ -33,10 +35,33 @@ const nav = [
 type NavigateType = {
   active: boolean;
 };
+const items: MenuProps["items"] = [
+  {
+    key: "1",
+    label: (
+      <div className="my_resume">
+        <p className="text">
+          My Resume | En{" "}
+          <span id="arrow">
+            <MdKeyboardDoubleArrowRight />
+          </span>
+        </p>
+        <a href="/pdf/resume.pdf" download>
+          <Button
+            type="link"
+            className="download_btn"
+            icon={<PiDownloadSimpleBold />}
+          ></Button>
+        </a>
+      </div>
+    ),
+  },
+];
 
 const Navigations: React.FC<NavigateType> = (props) => {
   const { active } = props;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
   const handleClick = (index: number): void => {
     setActiveIndex(index);
   };
@@ -78,13 +103,15 @@ const Navigations: React.FC<NavigateType> = (props) => {
         ))}
         <ThemeSwitcher changeTheme={changeTheme} theme={theme} />
         <div className="header_button">
-          <Button
-            className="button"
-            icon={<GoLinkExternal />}
-            iconPosition="end"
-          >
-            Resume
-          </Button>
+          <Dropdown menu={{ items }} placement="bottom">
+            <Button
+              className="button"
+              icon={<GoLinkExternal />}
+              iconPosition="end"
+            >
+              Resume
+            </Button>
+          </Dropdown>
         </div>
       </motion.div>
     </AnimatePresence>

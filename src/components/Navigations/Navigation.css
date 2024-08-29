@@ -25,6 +25,7 @@
   letter-spacing: 3%;
   text-align: left;
 }
+
 .button {
   max-width: 188px;
   height: 52px;
@@ -43,6 +44,40 @@
 .active {
   color: rgb(223, 20, 223);
 }
+.my_resume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: linear-gradient(
+      to left,
+      rgba(128, 0, 128, 0.459),
+      rgba(0, 0, 255, 0.459)
+    );
+  }
+  .my_resume:hover {
+    background: linear-gradient(to left, purple, blue);
+  }
+  .text {
+    display: flex;
+    align-content: inherit;
+    color: #fff;
+    column-gap: 10px;
+    font-weight: 600;
+  }
+  .text span {
+    display: flex;
+    align-items: center;
+  }
+  .download_btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
 
 @media (max-width: 1000px) {
   .navigations {

@@ -13,6 +13,11 @@ import {
 } from "@/components/ui/components/3d-card";
 import Image from "next/image";
 import { LinkPreview } from "@/components/ui/components/link-preview";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { FaGithub } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
+
 const words1 = [
   {
     text: "Front-end",
@@ -24,12 +29,31 @@ const words2 = [
   },
 ];
 const Home: React.FC = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#hero-text",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      }
+    );
+  }, []);
   return (
     <section id="home" className={scss.Home}>
       <div className="container">
         <div className={scss.home_content}>
           <div className={scss.home_info}>
-            <p className={scss.home_info_top_text}>Hi,I am</p>
+            <p id="hero-text" className={scss.home_info_top_text}>
+              Hi,I am
+            </p>
             <motion.p
               className={scss.home_info_name}
               initial={{
@@ -48,7 +72,7 @@ const Home: React.FC = () => {
             >
               Dilshod Adilbekov
             </motion.p>
-            <p className={scss.home_info_speciality}>
+            <p id="hero-text" className={scss.home_info_speciality}>
               <TypewritterEffect
                 delay={1}
                 words={words1}
@@ -56,7 +80,7 @@ const Home: React.FC = () => {
                 focusStyle={scss.home_info_text_focus}
               />
             </p>
-            <p className={scss.home_info_speciality2}>
+            <p id="hero-text" className={scss.home_info_speciality2}>
               <TypewritterEffect
                 delay={3}
                 words={words2}
@@ -64,7 +88,7 @@ const Home: React.FC = () => {
                 focusStyle={scss.home_info_text_focus}
               />
             </p>
-            <p className={scss.home_information}>
+            <p id="hero-text" className={scss.home_information}>
               I'm a Java-Script developer and I'm a student at the
               <LinkPreview
                 url=" https://motion.kg/kg"
@@ -75,7 +99,7 @@ const Home: React.FC = () => {
               Currently,I am focus on improving my skills in this sphere and
               create interactive Web-sites and Web-applications.
             </p>
-            <div className={scss.home_btn}>
+            <div id="hero-text" className={scss.home_btn}>
               <Button
                 href="#contacts"
                 onClick={() => console.log("clicked")}
@@ -85,9 +109,24 @@ const Home: React.FC = () => {
               >
                 Hire Me
               </Button>
+              <Button className={scss.github} icon={<FaGithub />}>
+                GitHub
+                <GoLinkExternal />
+              </Button>
             </div>
           </div>
-          <div className={scss.home_image}>
+          <motion.div
+            className={scss.home_image}
+            initial={{
+              y: 50,
+            }}
+            animate={{
+              y: 0,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
             <CardContainer className={scss.image_container}>
               <CardBody className={scss.image_body}>
                 <CardItem translateZ="100" className={scss.home_image_wrapper}>
@@ -95,7 +134,7 @@ const Home: React.FC = () => {
                 </CardItem>
               </CardBody>
             </CardContainer>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

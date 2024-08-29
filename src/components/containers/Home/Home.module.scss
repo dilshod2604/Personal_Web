@@ -99,7 +99,7 @@
     overflow: hidden;
   }
   .home_image_wrapper {
-    max-width: clamp(100px, 80vw, 400px);
+    max-width: clamp(100px, 100vw, 400px);
     height: clamp(100px, 80vw, 400px);
     overflow: hidden;
     border-radius: 20px;
@@ -112,38 +112,45 @@
     object-fit: contain;
   }
   .home_btn {
-    max-width: 190px;
-    background: linear-gradient(to left, rgb(221, 8, 221), blue);
-    padding: 3px;
+    max-width: 400px;
+    background: linear-gradient(
+      to left,
+      rgba(221, 8, 221, 0.153),
+      rgba(0, 0, 255, 0.153)
+    );
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
+    column-gap: 20px;
   }
   .button {
-    max-width: 185px;
+    max-width: 188px;
     height: 52px;
-    padding: 17px 52px;
-    border-radius: 5px;
-    border: none;
-    color: rgb(255, 255, 255);
-    background: transparent;
-    font-family: Poppins;
     font-size: 21px;
-    font-weight: 400;
-    line-height: 32px;
+    font-weight: 700;
     letter-spacing: 3%;
-    text-align: justify;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(to left, purple, blue);
+    border: none;
+    padding: 0 30px;
   }
-  .sparkless_btn {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+
+  .github {
+    max-width: 188px;
+    height: 52px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 3%;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(to left, purple, blue);
+    border: none;
+    padding: 0 30px;
   }
 }
 @media (max-width: 1380px) {
@@ -168,5 +175,11 @@
   .home_image {
     width: 100%;
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .home_btn {
+    flex-direction: column;
+    row-gap: 10px;
   }
 }

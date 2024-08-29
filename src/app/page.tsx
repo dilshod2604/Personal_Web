@@ -23,25 +23,24 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // if (preloader) {
-  //   return <Preloader />;
-  // } else {
-    return (
-      <>
-        <BackgroundBeamsWithCollision className="background">
-          <ThemeProvider>
-            <Header />
-            <Home />
-            <About />
-            <Skills />
-            <Projects />
-            <Contacts />
-            <Footer />
-          </ThemeProvider>
-        </BackgroundBeamsWithCollision>
-      </>
-    );
-  // }
+  if (preloader) {
+    return <Preloader />;
+  }
+  return (
+    <>
+      {/* <BackgroundBeamsWithCollision> */}
+        <ThemeProvider>
+          <Header />
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contacts />
+          <Footer />
+        </ThemeProvider>
+      {/* </BackgroundBeamsWithCollision> */}
+    </>
+  );
 }
 
 export default App;

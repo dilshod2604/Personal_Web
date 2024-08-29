@@ -6,6 +6,7 @@ import "./Header.css";
 import Navigations from "@/components/Navigations/Navigations";
 const Header: React.FC = () => {
   const [active, setActive] = useState(false);
+  
   const handleClick = () => {
     setActive(!active);
   };

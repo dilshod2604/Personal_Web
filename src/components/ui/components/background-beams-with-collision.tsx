@@ -67,7 +67,7 @@ export const BackgroundBeamsWithCollision = ({
   ];
 
   return (
-    <div ref={parentRef} className={cn("h-sreen w-full ", className)}>
+    <div ref={parentRef} className={cn("h-screen w-full", className)}>
       {beams.map((beam) => (
         <CollisionMechanism
           key={beam.initialX + "beam-idx"}

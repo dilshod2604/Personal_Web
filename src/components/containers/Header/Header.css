@@ -14,7 +14,7 @@
   height: 100px;
   position: fixed;
   top: 0;
-  background:var(--header-color);
+  background: var(--header-color);
   z-index: 3;
 }
 .header_content {
@@ -51,6 +51,7 @@
 .header_burger_menu {
   display: none;
 }
+
 
 @media (max-width: 1000px) {
   .header_nav {

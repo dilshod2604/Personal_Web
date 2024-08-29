@@ -6,8 +6,29 @@ import { motion } from "framer-motion";
 import ProgressOfSkills from "@/components/Progress/Progress";
 import Image from "next/image";
 import { LinkPreview } from "@/components/ui/components/link-preview";
+import {useGSAP} from "@gsap/react";
+import  {gsap} from "gsap"
 
 const About: React.FC = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#text",
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+    
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          amount: 1.5,
+        },
+      }
+    );
+  }, []);
+  
   const dividerAnimations = {
     visible: {
       opacity: 1,
@@ -59,14 +80,14 @@ const About: React.FC = () => {
               ></motion.span>
             </div>
             <div className={scss.about_informtion_box}>
-              <p className={scss.about_info_text}>
+              <p id="text" className={scss.about_info_text}>
                 Hallo! My name is Dilshod and I am a Java-Script Developer.I'm
                 keen on creating WEB-sites and web applications.Currently, I
                 live among the cods and also I live on the internet, I am
                 spending my time to creating.I started to intrest in IT sphere
                 in 2023.
               </p>
-              <p className={scss.about_info_text}>
+              <p id="text" className={scss.about_info_text}>
                 I finished my study at the{" "}
                 <LinkPreview url="https://motion.kg/kg">
                   MOTION WEB IT ACADEMY
@@ -75,7 +96,7 @@ const About: React.FC = () => {
                 sphere.One of the best my goal is to create interactive WEB
                 sites and applications.
               </p>
-              <p className={scss.about_info_text}>
+              <p id="text" className={scss.about_info_text}>
                 My expertise in Java-Script frameworks and libraries.I have
                 extensive experience with Java-script frameworks and libraries
                 such a:
