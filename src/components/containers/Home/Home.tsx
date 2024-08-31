@@ -3,7 +3,6 @@ import scss from "./Home.module.scss";
 import { motion } from "framer-motion";
 import MyImage from "../../../assets/myimage01.png";
 import { MdOutlineEmail } from "react-icons/md";
-
 import { Button } from "antd";
 import TypewritterEffect from "@/Animations/TypewriterEffect.tsc/TypewritterEffect";
 import {
@@ -18,55 +17,33 @@ import { gsap } from "gsap";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 
-const words1 = [
-  {
-    text: "Front-end",
-  },
-];
-const words2 = [
-  {
-    text: "Developer",
-  },
-];
+const words1 = [{ text: "Front-end" }];
+const words2 = [{ text: "Developer" }];
+
 const Home: React.FC = () => {
   useGSAP(() => {
     gsap.fromTo(
       "#hero-text",
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: {
-          amount: 0.5,
-        },
-      }
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, stagger: { amount: 0.5 } }
     );
   }, []);
+
   return (
     <section id="home" className={scss.Home}>
       <div className="container">
         <div className={scss.home_content}>
           <div className={scss.home_info}>
             <p id="hero-text" className={scss.home_info_top_text}>
-              Hi,I am
+              Hi, I am
             </p>
             <motion.p
               className={scss.home_info_name}
-              initial={{
-                opacity: 0,
-                x: -100,
-              }}
+              initial={{ opacity: 0, x: -100 }}
               whileInView={{
                 opacity: 1,
                 x: 0,
-                transition: {
-                  duration: 0.5,
-                  delay: 0.5,
-                },
+                transition: { duration: 0.5, delay: 0.5 },
               }}
               viewport={{ amount: 0.2 }}
             >
@@ -89,15 +66,15 @@ const Home: React.FC = () => {
               />
             </p>
             <p id="hero-text" className={scss.home_information}>
-              I'm a Java-Script developer and I'm a student at the
+              I&apos;m a JavaScript developer and a student at the
               <LinkPreview
-                url=" https://motion.kg/kg"
+                url="https://motion.kg/kg"
                 className={scss.home_information_text_inner_link}
               >
                 MOTION WEB IT ACADEMY
               </LinkPreview>
-              Currently,I am focus on improving my skills in this sphere and
-              create interactive Web-sites and Web-applications.
+              . Currently, I&apos;m focused on improving my skills in this
+              sphere and creating interactive websites and web applications.
             </p>
             <div id="hero-text" className={scss.home_btn}>
               <Button
@@ -105,11 +82,16 @@ const Home: React.FC = () => {
                 onClick={() => console.log("clicked")}
                 className={scss.button}
                 icon={<MdOutlineEmail />}
-                iconPosition="end"
               >
                 Hire Me
               </Button>
-              <Button className={scss.github} icon={<FaGithub />}>
+              <Button
+                href="https://github.com/yourusername" // Update this with your GitHub profile link
+                target="_blank"
+                rel="noopener noreferrer"
+                className={scss.github}
+                icon={<FaGithub />}
+              >
                 GitHub
                 <GoLinkExternal />
               </Button>
@@ -117,15 +99,8 @@ const Home: React.FC = () => {
           </div>
           <motion.div
             className={scss.home_image}
-            initial={{
-              y: 50,
-            }}
-            animate={{
-              y: 0,
-              transition: {
-                duration: 1,
-              },
-            }}
+            initial={{ y: 50 }}
+            animate={{ y: 0, transition: { duration: 1 } }}
           >
             <CardContainer className={scss.image_container}>
               <CardBody className={scss.image_body}>

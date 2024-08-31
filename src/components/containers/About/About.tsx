@@ -81,25 +81,25 @@ const About: React.FC = () => {
             </div>
             <div className={scss.about_informtion_box}>
               <p id="text" className={scss.about_info_text}>
-                Hallo! My name is Dilshod and I am a Java-Script Developer.I'm
-                keen on creating WEB-sites and web applications.Currently, I
-                live among the cods and also I live on the internet, I am
-                spending my time to creating.I started to intrest in IT sphere
-                in 2023.
+                Hallo! My name is Dilshod and I am a JavaScript Developer.
+                I&apos;m keen on creating websites and web applications.
+                Currently, I live among the code and also on the internet,
+                spending my time creating. I started to be interested in the IT
+                sphere in 2023.
               </p>
               <p id="text" className={scss.about_info_text}>
-                I finished my study at the{" "}
+                I finished my studies at the{" "}
                 <LinkPreview url="https://motion.kg/kg">
                   MOTION WEB IT ACADEMY
                 </LinkPreview>
-                in 2025. Currently, I'm focus on improving my skills in this
-                sphere.One of the best my goal is to create interactive WEB
-                sites and applications.
+                in 2025. Currently, I&apos;m focused on improving my skills in
+                this sphere. One of my main goals is to create interactive
+                websites and applications.
               </p>
               <p id="text" className={scss.about_info_text}>
-                My expertise in Java-Script frameworks and libraries.I have
-                extensive experience with Java-script frameworks and libraries
-                such a:
+                My expertise lies in JavaScript frameworks and libraries. I have
+                extensive experience with JavaScript frameworks and libraries
+                such as:
               </p>
             </div>
             <div className={scss.abount_info_skills}>

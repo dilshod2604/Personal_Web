@@ -10,7 +10,9 @@ const Contacts: React.FC = () => {
       <div className="container">
         <div className={scss.contacts_content}>
           <div className={scss.contacts_title}>
-            <h1 className={scss.contacts_title_text}>Let's Get In touch</h1>
+            <h1 className={scss.contacts_title_text}>
+              Let&apos;s Get In Touch
+            </h1>
           </div>
           <div className={scss.form_box}>
             <BackgroundGradient className="rounded-[22px] max-w-lg p-4 sm:p-10 bg-white dark:bg-zinc-900">
@@ -32,7 +34,6 @@ const Contacts: React.FC = () => {
                     type="default"
                     className={scss.form_btn}
                     icon={<RiMailSendLine />}
-                    iconPosition="end"
                   >
                     SEND
                   </Button>
