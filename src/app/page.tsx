@@ -16,11 +16,9 @@ function App() {
   const [preloader, setPreloader] = useState<boolean>(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setPreloader(false);
     }, 1000);
-
-    return () => clearTimeout(timer);
   }, []);
 
   if (preloader) {
