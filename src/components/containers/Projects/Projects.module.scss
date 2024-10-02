@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../../Fonts/Popins/Poppins-ExtraBold.ttf);
+  font-weight: 800;
+}
+.Projects {
+  width: 100%;
+  .projects_content {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #000;
+    position: relative;
+    height: 300px;
+  }
+  .projects_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  .projects_title_text {
+    font-size: clamp(20px, 8vw, 50px);
+    font-family: Poppins;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .projects_title_divider {
+    height: 1.5px;
+    background: linear-gradient(to left, purple, blue);
+  }
+}

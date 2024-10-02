@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../Fonts/Popins/Poppins-SemiBold.ttf);
+  font-weight: 600px;
+}
+.progress_of_skills {
+  width: 100%;
+  .list_of_progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 5px;
+  }
+  .skills_box {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    width: 40%;
+    column-gap: 20px;
+  }
+  .skills_img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .skills_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .skills_name {
+    color: var(--text-colors);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 3%;
+    text-align: left;
+  }
+  .ant-progress-bg-inner {
+    height: 20px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .list_of_progress {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .ant-progress-outer {
+    max-width: 200px;
+    height: 20px !important;
+  }
+}

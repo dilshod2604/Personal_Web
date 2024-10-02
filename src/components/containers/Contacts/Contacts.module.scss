@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../../Fonts/Popins/Poppins-SemiBold.ttf);
+  font-weight: 600px;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../../../Fonts/Popins/Poppins-Regular.ttf);
+  font-weight: 400px;
+}
+.Contacts {
+  width: 100%;
+  margin-top: 100px;
+  .contacts_content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contacts_title {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contacts_title_text {
+    margin: 0;
+    color: var(--text-colors);
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 98px;
+    letter-spacing: 3%;
+    text-align: center;
+  }
+  .form_box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .form_btn {
+    width: 100%;
+    background: linear-gradient(to left, purple, blue);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+}
