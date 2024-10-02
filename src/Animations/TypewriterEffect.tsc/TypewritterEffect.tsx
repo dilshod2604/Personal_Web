@@ -38,11 +38,7 @@ const TypewritterEffect: React.FC<WordType> = (props) => {
             {word.text.map((char, index) => (
               <motion.span className={className} key={index}>
                 {char}
-<<<<<<< HEAD
-              </motion.span>  
-=======
               </motion.span>
->>>>>>> 973191537887ca13855bee811270af2f10d4fc81
             ))}
             &nbsp;
           </div>
