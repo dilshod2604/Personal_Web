@@ -81,7 +81,7 @@ const About: React.FC = () => {
             </div>
             <div className={scss.about_informtion_box}>
               <p id="text" className={scss.about_info_text}>
-                Hallo! My name is Dilshod and I am a JavaScript Developer.
+                Hallo! My name is Dilshod and I am a Front-end Developer.
                 I&apos;m keen on creating websites and web applications.
                 Currently, I live among the code and also on the internet,
                 spending my time creating. I started to be interested in the IT
