@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 type WordType = {
   words: {
     text: string;
@@ -9,14 +10,12 @@ type WordType = {
   focusStyle: string;
 };
 
-const TypewritterEffect: React.FC<WordType> = (props) => {
-  const { words, className, delay, focusStyle } = props;
-  const wordArray = words.map((word) => {
-    return {
-      ...word,
-      text: word.text.split(""),
-    };
-  });
+const TypewritterEffect: React.FC<WordType> = ({ words, className, delay = 0, focusStyle }) => {
+  const wordArray = words.map((word) => ({
+    ...word,
+    text: word.text.split(""),
+  }));
+
   const textAnimation = {
     visible: {
       width: "fit-content",
@@ -30,30 +29,28 @@ const TypewritterEffect: React.FC<WordType> = (props) => {
       width: "0%",
     },
   };
-  const renderWords = () => {
-    return (
-      <div>
-        {wordArray.map((word, index) => (
-          <div key={index} style={{ display: "flex" }}>
-            {word.text.map((char, index) => (
-              <motion.span className={className} key={index}>
-                {char}
-              </motion.span>
-            ))}
-            &nbsp;
-          </div>
-        ))}
-      </div>
-    );
-  };
+
+  const renderWords = () => (
+    <div>
+      {wordArray.map((word, wordIndex) => (
+        <div key={wordIndex} style={{ display: "flex" }}>
+          {word.text.map((char, charIndex) => (
+            <motion.span className={className} key={charIndex}>
+              {char}
+            </motion.span>
+          ))}
+          &nbsp;
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <motion.div style={{ display: "flex", alignItems: "center" }}>
       <motion.div
-        style={{
-          overflow: "hidden",
-        }}
-        initial={"hidden"}
-        whileInView={"visible"}
+        style={{ overflow: "hidden" }}
+        initial="hidden"
+        whileInView="visible"
         variants={textAnimation}
         viewport={{ amount: 0.2 }}
       >
@@ -69,7 +66,9 @@ const TypewritterEffect: React.FC<WordType> = (props) => {
           repeatType: "reverse",
         }}
         className={focusStyle}
-      ></motion.span>
+      >
+        |
+      </motion.span>
     </motion.div>
   );
 };
