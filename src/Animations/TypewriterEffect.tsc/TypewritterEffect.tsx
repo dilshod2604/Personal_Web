@@ -23,6 +23,7 @@ const TypewritterEffect: React.FC<WordType> = ({ words, className, delay = 0, fo
         duration: 2,
         delay: delay,
         ease: "linear",
+        
       },
     },
     hidden: {

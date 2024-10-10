@@ -10,7 +10,6 @@ import Projects from "@/components/containers/Projects/Projects";
 import Contacts from "@/components/containers/Contacts/Contacts";
 import Footer from "@/components/containers/Footer/Footer";
 import Preloader from "@/components/Preloader/Preloader";
-import { BackgroundBeamsWithCollision } from "@/components/ui/components/background-beams-with-collision";
 
 function App() {
   const [preloader, setPreloader] = useState<boolean>(true);

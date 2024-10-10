@@ -1,6 +1,8 @@
 import React from "react";
 import scss from "./Projects.module.scss";
 import { motion } from "framer-motion";
+import { PinContainer } from "@/components/ui/components/3d-pin";
+import TracBeat from "@/components/projects/TracBeat";
 const Projects: React.FC = () => {
   const titleAnimations = {
     visible: {
@@ -52,6 +54,10 @@ const Projects: React.FC = () => {
               whileInView={"visible"}
               viewport={{ amount: 0.2 }}
             ></motion.span>
+          </div>
+
+          <div className="flex flex-col w-full px-4 py-2 rounded-xl  ">
+            <TracBeat />
           </div>
         </div>
       </div>
