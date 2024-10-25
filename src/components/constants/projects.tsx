@@ -14,3 +14,16 @@ export const track_beat_tools: ProjectTools = {
     },
   ],
 };
+export const movie_stream_tools: ProjectTools = {
+  name: "MovieStream",
+  description:
+    "It's a movie platform MovieStram for movie lovers.Every visitor can find his favorite movie and relax to watching films.",
+  tools: ["Next.js", "Tailwind Css", "RTQ Query"],
+  links: [
+    {
+      name: "GitHub",
+      link: "https://github.com/dilshod2604/Movie-Stream",
+      icon: IoLogoGithub,
+    },
+  ],
+};

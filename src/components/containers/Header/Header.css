@@ -15,7 +15,7 @@
   position: fixed;
   top: 0;
   background: var(--header-color);
-  z-index: 3;
+  z-index: 100;
 }
 .header_content {
   display: flex;

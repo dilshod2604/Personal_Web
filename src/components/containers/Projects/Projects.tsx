@@ -3,6 +3,7 @@ import scss from "./Projects.module.scss";
 import { motion } from "framer-motion";
 import { PinContainer } from "@/components/ui/components/3d-pin";
 import TracBeat from "@/components/projects/TracBeat";
+import MovieStream from "@/components/projects/MovieStream";
 const Projects: React.FC = () => {
   const titleAnimations = {
     visible: {
@@ -56,8 +57,9 @@ const Projects: React.FC = () => {
             ></motion.span>
           </div>
 
-          <div className="flex flex-col w-full px-4 py-2 rounded-xl  ">
+          <div className="flex flex-col w-full px-4 py-2 rounded-xl gap-y-3  ">
             <TracBeat />
+            <MovieStream />
           </div>
         </div>
       </div>
