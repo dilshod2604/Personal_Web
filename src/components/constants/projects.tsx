@@ -27,3 +27,16 @@ export const movie_stream_tools: ProjectTools = {
     },
   ],
 };
+export const dshop_tools: ProjectTools = {
+  name: "D-shop",
+  description:
+    "It's an online shop where every customer can find their essential products and order them easily.",
+  tools: ["Next.js", "Tailwind Css", "RTQ Query", "Antd", "MaterialUI"],
+  links: [
+    {
+      name: "GitHub",
+      link: "https://github.com/dilshod2604/D-shop",
+      icon: IoLogoGithub,
+    },
+  ],
+};
