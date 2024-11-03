@@ -17,7 +17,7 @@ const DShop = () => {
               {dshop_tools.description}
             </p>
           </div>
-          <div className="flex  gap-x-4 px-3 py-3">
+          <div className="flex  gap-x-4 px-3 py-3 max-sm:flex-col max-sm:gap-y-2">
             {dshop_tools.tools.map((tool, index) => (
               <p key={index} className="text-neutral-400">
                 {tool}
