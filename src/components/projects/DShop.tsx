@@ -14,7 +14,7 @@ const DShop = () => {
           <h1 className="text-white font-bold text-xl">{dshop_tools.name}</h1>
           <div className="flex  items-center px-3 py-3 bg-purple-600/45  rounded-xl max-w-[400px]">
             <p className="text-neutral-300 text-sm  ">
-              {movie_stream_tools.description}
+              {dshop_tools.description}
             </p>
           </div>
           <div className="flex  gap-x-4 px-3 py-3">
