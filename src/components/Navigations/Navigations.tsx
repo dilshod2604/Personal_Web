@@ -46,7 +46,7 @@ const items: MenuProps["items"] = [
             <MdKeyboardDoubleArrowRight />
           </span>
         </p>
-        <a href="/pdf/resume.pdf" download>
+        <a href="/pdf/Dilshod_Adilbekov_resume.pdf" download>
           <Button
             type="link"
             className="download_btn"
@@ -109,7 +109,7 @@ const Navigations: React.FC<NavigateType> = (props) => {
               icon={<GoLinkExternal />}
               iconPosition="end"
             >
-              Resume
+              Resume+
             </Button>
           </Dropdown>
         </div>
