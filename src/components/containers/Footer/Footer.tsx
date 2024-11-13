@@ -1,8 +1,8 @@
 import React from "react";
 import scss from "./Footer.module.scss";
-import gitHub from "../../../assets/github-square.svg";
-import linkedIn from "../../../assets/linked-in.svg";
-import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
+import { BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -16,12 +16,15 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className={scss.footer_icons}>
-              <a href="#" className={scss.icons}>
-                <Image src={linkedIn} alt="linkedIn" />
-              </a>
-              <a href="#" className={scss.icons}>
-                <Image src={gitHub} alt="gitHub" />
-              </a>
+              <Link href="https://github.com/dilshod2604" className={scss.icons}>
+                <FaGithub size={30} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/dima-frontdev/"
+                className={scss.icons}
+              >
+                <BsLinkedin size={30} />
+              </Link>
             </div>
           </div>
         </div>
