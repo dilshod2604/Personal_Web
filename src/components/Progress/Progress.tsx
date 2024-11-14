@@ -66,6 +66,7 @@ const ProgressOfSkills: React.FC = () => {
           </div>
           <Progress
             percent={el.percent}
+            showInfo={false}
             percentPosition={{ align: "center", type: "inner" }}
             size={["100%", 20]}
           />
