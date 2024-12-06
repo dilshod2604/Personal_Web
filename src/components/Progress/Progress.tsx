@@ -5,6 +5,7 @@ import react from "../../assets/react-1.svg";
 import typescript from "../../assets/typescript.svg";
 import vite from "../../assets/vitejs.svg";
 import js from "../../assets/logo-javascript.svg";
+import next from "../../assets/next-js.svg"
 import { motion } from "framer-motion";
 import Image from "next/image";
 const skills = [
@@ -27,6 +28,11 @@ const skills = [
     name: "Vite",
     percent: 80,
     image: vite,
+  },
+  {
+    name: "Next.Js",
+    percent: 70,
+    image: next,
   },
 ];
 

@@ -1,10 +1,7 @@
 import React from "react";
 import scss from "./Projects.module.scss";
 import { motion } from "framer-motion";
-import { PinContainer } from "@/components/ui/components/3d-pin";
-import TracBeat from "@/components/projects/TracBeat";
-import MovieStream from "@/components/projects/MovieStream";
-import DShop from "@/components/projects/DShop";
+import MyProjects from "@/components/projects/Myprojects";
 const Projects: React.FC = () => {
   const titleAnimations = {
     visible: {
@@ -59,9 +56,7 @@ const Projects: React.FC = () => {
           </div>
 
           <div className="flex flex-col w-full px-4 py-2 rounded-xl gap-y-3  ">
-            <TracBeat />
-            <MovieStream />
-            <DShop />
+            <MyProjects />
           </div>
         </div>
       </div>

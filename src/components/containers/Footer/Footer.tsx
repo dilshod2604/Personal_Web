@@ -5,10 +5,11 @@ import { BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  
   return (
     <>
       <div className={scss.Footer}>
-        <div className="container">
+        <div className="container  ">
           <div className={scss.footer_content}>
             <div className={scss.footer_builder}>
               <p className={scss.footer_center_text}>
@@ -16,7 +17,10 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className={scss.footer_icons}>
-              <Link href="https://github.com/dilshod2604" className={scss.icons}>
+              <Link
+                href="https://github.com/dilshod2604"
+                className={scss.icons}
+              >
                 <FaGithub size={30} />
               </Link>
               <Link

@@ -46,7 +46,7 @@ const items: MenuProps["items"] = [
             <MdKeyboardDoubleArrowRight />
           </span>
         </p>
-        <a href="/pdf/Dilshod_resume.pdf" download>
+        <a href="/pdf/dilshodadilbekov_SV.pdf" download>
           <Button
             type="link"
             className="download_btn"

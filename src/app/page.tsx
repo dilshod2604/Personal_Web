@@ -25,7 +25,6 @@ function App() {
   }
   return (
     <>
-      {/* <BackgroundBeamsWithCollision> */}
         <ThemeProvider>
           <Header />
           <Home />
@@ -35,7 +34,6 @@ function App() {
           <Contacts />
           <Footer />
         </ThemeProvider>
-      {/* </BackgroundBeamsWithCollision> */}
     </>
   );
 }
