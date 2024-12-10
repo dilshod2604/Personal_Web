@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
             ></motion.span>
           </div>
 
-          <div className="flex flex-col w-full px-4 py-2 rounded-xl gap-y-3  ">
+          <div className="flex flex-col w-full py-2 rounded-xl gap-y-3  ">
             <MyProjects />
           </div>
         </div>

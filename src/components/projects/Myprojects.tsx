@@ -19,23 +19,15 @@ const MyProjects = () => {
 
   const closeModal = () => setModal(false);
   return (
-    <section className="pt-[100px]" id="projects">
-      <div className="container">
+    <section className="pt-[30px]" id="projects ">
         <div className="flex flex-col gap-y-5">
-          <h1
-            className={twMerge(
-              " font-black text-[50px] w-full text-center max-lg:text-[40px] max-md:text-[30px] text-[var(--text-colors)]"
-            )}
-          >
-            Projects I’ve Worked on
-          </h1>
-          <div className="flex flex-col gap-y-4 ">
+          <div className="flex flex-col gap-y-4  ">
             {projects.map((item) => (
               <div
                 key={item.name}
-                className="flex items-center p-[20px]  rounded-[36px] bg-blue-950 gap-x-[30px] max-lg:flex-col"
+                className="flex items-center p-[20px]  rounded-xl bg-blue-950 gap-x-[30px] max-lg:flex-col"
               >
-                <div className="w-full h-[500px] relative  rounded-xl overflow-hidden bg-blue-600 p-[10px]  ">
+                <div className="w-full h-[500px]  max-sm:h-[300px] relative  rounded-xl overflow-hidden bg-blue-600   ">
                   <div className="flex items-center max-lg:justify-center  ">
                     <Image
                       src={item.image1}
@@ -111,7 +103,6 @@ const MyProjects = () => {
             </div>
           </Modal>
         }
-      </div>
     </section>
   );
 };

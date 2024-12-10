@@ -7,9 +7,11 @@ import Home from "@/components/containers/Home/Home";
 import About from "@/components/containers/About/About";
 import Skills from "@/components/containers/Skills/Skills";
 import Projects from "@/components/containers/Projects/Projects";
-import Contacts from "@/components/containers/Contacts/Contacts";
 import Footer from "@/components/containers/Footer/Footer";
 import Preloader from "@/components/Preloader/Preloader";
+import Experience from "@/components/containers/Experience/Experience";
+import Socialmedia from "@/components/containers/SocialMedias/SocialMedias";
+import GetInTouch from "@/components/containers/ContactsForm/GetInTouch";
 
 function App() {
   const [preloader, setPreloader] = useState<boolean>(true);
@@ -25,15 +27,17 @@ function App() {
   }
   return (
     <>
-        <ThemeProvider>
-          <Header />
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Contacts />
-          <Footer />
-        </ThemeProvider>
+      <ThemeProvider>
+        <Header />
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Socialmedia />
+        <GetInTouch />
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }

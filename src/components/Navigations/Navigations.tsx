@@ -31,6 +31,10 @@ const nav = [
     name: "Contacts",
     link: "contacts",
   },
+  {
+    name: "Experience",
+    link: "experience",
+  },
 ];
 type NavigateType = {
   active: boolean;
