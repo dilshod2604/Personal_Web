@@ -8,10 +8,10 @@ import About from "@/components/containers/About/About";
 import Skills from "@/components/containers/Skills/Skills";
 import Projects from "@/components/containers/Projects/Projects";
 import Footer from "@/components/containers/Footer/Footer";
-import Preloader from "@/components/Preloader/Preloader";
 import Experience from "@/components/containers/Experience/Experience";
 import Socialmedia from "@/components/containers/SocialMedias/SocialMedias";
 import GetInTouch from "@/components/containers/ContactsForm/GetInTouch";
+import Preloader from "@/components/Preloader/Preloader";
 
 function App() {
   const [preloader, setPreloader] = useState<boolean>(true);
